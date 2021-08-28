@@ -1,0 +1,81 @@
+﻿<Window x:Class="NetflixUnOfficial.NetflixShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="700"
+        Title="Netflix" MinHeight="600" MinWidth="900"
+        WindowStartupLocation="CenterScreen" WindowState="Normal" Background="Black" WindowStyle="None"
+        ui:WindowHelper.UseModernWindowStyle="True" ui:WindowHelper.FixMaximizedWindow="True"
+        ui:TitleBar.IsIconVisible="True" ui:TitleBar.ExtendViewIntoTitleBar="True">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid
+            x:Name="AppTitleBar" MaxHeight="32"
+            Height="{Binding ElementName=Window, Path=(ui:TitleBar.Height)}">
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="TextElement.Foreground"
+                            Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsActive, ElementName=Window}" Value="False">
+                            <Setter Property="TextElement.Foreground"
+                                    Value="{DynamicResource SystemControlDisabledBaseMediumLowBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+            <ui:SimpleStackPanel Grid.Column="0" Orientation="Horizontal" Spacing="10" Margin="5 0 0 0">
+                <Image gif:ImageBehavior.AnimatedSource="Resources/NetflixAnimation.gif"
+                       gif:ImageBehavior.RepeatBehavior="0x" Stretch="Uniform" />
+                <TextBlock FontSize="12" FontWeight="Light" VerticalAlignment="Center">Netflix (Un-Official)</TextBlock>
+            </ui:SimpleStackPanel>
+            <ui:SimpleStackPanel Grid.Column="1" Orientation="Horizontal" Spacing="0">
+                <ui:TitleBarButton Background="Transparent" ToolTip="Refresh Netflix" Click="Refresh_Netflix">
+                    <ui:PathIcon Width="12" Height="12"
+                                 Data="M 4.99577,4.99984L 9.99577,4.99984L 9.99577,10.0002L 8.99577,10.0002L 8.99577,6.49284C 6.64941,7.47363 5.00033,9.79069 5.00033,12.4928C 5.00033,16.0827 7.91048,18.9928 11.5003,18.9928C 15.0902,18.9928 18.0003,16.0827 18.0003,12.4928C 18.0003,9.41764 15.8646,6.84131 12.9958,6.16569L 12.9958,5.14193C 16.4212,5.83512 19.0003,8.86279 19.0003,12.4928C 19.0003,16.6349 15.6426,19.9928 11.5003,19.9928C 7.35807,19.9928 4.00033,16.6349 4.00033,12.4928C 4.00033,9.7194 5.50586,7.29753 7.74414,5.99984L 4.99577,5.99984L 4.99577,4.99984 Z " />
+                </ui:TitleBarButton>
+                <ui:TitleBarButton Background="Transparent" ToolTip="Developer site" Click="Toggle_DeveloperPage">
+                    <ui:PathIcon Width="12" Height="12"
+                                 Data="M600 1100C323.75 1100 100 876.25 100 600A499.7 499.7 0 0 1 441.9000000000001 125.5999999999999C466.9 121.25 476.25 136.25 476.25 149.4000000000001C476.25 161.25 475.6 200.6 475.6 242.5000000000001C350 219.35 317.5 273.1 307.5 301.2500000000001C301.85 315.6500000000001 277.5000000000001 360.0000000000001 256.25 371.9000000000001C238.7500000000001 381.2500000000003 213.75 404.4000000000001 255.6 405.0000000000001C295 405.6500000000002 323.1 368.7500000000003 332.5 353.7500000000001C377.5000000000001 278.1500000000001 449.4 299.4000000000002 478.1000000000001 312.5000000000003C482.5 345.0000000000001 495.6 366.8500000000002 510.0000000000001 379.3500000000002C398.7500000000001 391.8500000000002 282.5000000000001 435.0000000000001 282.5000000000001 626.2500000000001C282.5000000000001 680.6500000000002 301.85 725.6000000000001 333.7500000000001 760.6500000000001C328.7500000000001 773.1500000000001 311.25 824.4000000000001 338.75 893.1500000000001C338.75 893.1500000000001 380.6 906.2500000000002 476.25 841.8500000000001A464 464 0 0 0 601.25 858.7500000000002C643.75 858.7500000000002 686.25 853.1500000000001 726.25 841.9000000000002C821.85 906.9 863.7499999999999 893.1000000000001 863.7499999999999 893.1000000000001C891.25 824.3500000000001 873.7499999999999 773.1000000000001 868.75 760.6000000000001C900.6 725.6000000000001 919.9999999999998 681.2500000000002 919.9999999999998 626.2500000000002C919.9999999999998 434.3500000000003 803.15 391.8500000000002 691.8999999999999 379.3500000000002C709.9999999999999 363.7500000000001 725.6499999999999 333.7500000000003 725.6499999999999 286.8500000000002C725.6499999999999 220.0000000000001 724.9999999999999 166.2500000000002 724.9999999999999 149.3500000000001C724.9999999999999 136.25 734.4 120.6500000000001 759.4 125.6500000000001A500.8 500.8 0 0 1 1100 600C1100 876.25 876.2499999999999 1100 600 1100z" />
+                </ui:TitleBarButton>
+                <!--<ui:TitleBarButton Background="Transparent" ToolTip="Full Screen" Click="Click_Toggle_FullScreen">
+                    <ui:PathIcon Width="12" Height="12"
+                                 Data="M112.4 92h77.7c7.7 0 13.9-6.2 13.9-13.9v-.2c0-7.7-6.2-13.9-13.9-13.9H77.9C70.2 64 64 70.2 64 77.9v112.2c0 7.7 6.2 13.9 13.9 13.9h.2c7.7 0 13.9-6.2 13.9-13.9v-77.7l117.1 116.3c2.6 2.6 6.1 4 9.8 4 3.7 0 7.2-1.4 9.8-4.1 5.4-5.4 5.4-14.2 0-19.6L112.4 92zM434.1 64H321.9c-7.7 0-13.9 6.2-13.9 13.9v.2c0 7.7 6.2 13.9 13.9 13.9h77.7L283.3 209.1c-5.4 5.4-5.4 14.2 0 19.6 2.6 2.6 6.1 4.1 9.8 4.1 3.7 0 7.2-1.4 9.8-4L420 112.4v77.7c0 7.7 6.2 13.9 13.9 13.9h.2c7.7 0 13.9-6.2 13.9-13.9V77.9c0-7.7-6.2-13.9-13.9-13.9zM218.9 279.2c-3.7 0-7.2 1.4-9.8 4L92 399.6v-77.7c0-7.7-6.2-13.9-13.9-13.9h-.2c-7.7 0-13.9 6.2-13.9 13.9v112.2c0 7.7 6.2 13.9 13.9 13.9h112.2c7.7 0 13.9-6.2 13.9-13.9v-.2c0-7.7-6.2-13.9-13.9-13.9h-77.7l116.3-117.1c5.4-5.4 5.4-14.2 0-19.6-2.6-2.6-6.1-4.1-9.8-4.1zM434.1 308h-.2c-7.7 0-13.9 6.2-13.9 13.9v77.7L302.9 283.3c-2.6-2.6-6.1-4-9.8-4-3.7 0-7.2 1.4-9.8 4.1-5.4 5.4-5.4 14.2 0 19.6l116.3 117h-77.7c-7.7 0-13.9 6.2-13.9 13.9v.2c0 7.7 6.2 13.9 13.9 13.9h112.2c7.7 0 13.9-6.2 13.9-13.9V321.9c0-7.7-6.2-13.9-13.9-13.9z" />
+                </ui:TitleBarButton>-->
+
+
+            </ui:SimpleStackPanel>
+
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid x:Name="GridWebView" Visibility="Collapsed">
+                <wpf:WebView2 Name="WebView"
+                              NavigationStarting="WebView_OnNavigationStarting"
+                              NavigationCompleted="WebView_OnNavigationCompleted" />
+            </Grid>
+            <Grid x:Name="GridLoader" Visibility="Collapsed">
+                <Grid.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.5" />
+                </Grid.Background>
+                <Image gif:ImageBehavior.AnimatedSource="Resources/NetflixAnimation.gif"
+                       gif:ImageBehavior.RepeatBehavior="3000x" Stretch="Uniform" Width="300" Height="200" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
