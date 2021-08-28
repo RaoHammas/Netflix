@@ -2,7 +2,6 @@
 using System.Windows;
 using Microsoft.Web.WebView2.Core;
 using ModernWpf.Controls;
-using ModernWpf.Controls.Primitives;
 
 namespace NetflixUnOfficial
 {
