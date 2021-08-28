@@ -40,13 +40,13 @@ namespace NetflixUnOfficial
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: transparent;
+	background-color: #101010;
 }
 
 ::-webkit-scrollbar
 {
 	width: 8px;
-	background-color: transparent;
+	background-color: #101010;
 }
 
 ::-webkit-scrollbar-thumb
