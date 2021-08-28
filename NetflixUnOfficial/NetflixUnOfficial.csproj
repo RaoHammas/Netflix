@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/RaoHammas/Netflix</RepositoryUrl>
     <PackageTags>Netflix</PackageTags>
     <PackageProjectUrl>https://github.com/RaoHammas/Netflix</PackageProjectUrl>
+	  <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	  <AssemblyName>Netflix</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
