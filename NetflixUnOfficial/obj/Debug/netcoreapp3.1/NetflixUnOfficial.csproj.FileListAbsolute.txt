@@ -1,4 +1,3 @@
-D:\2-PROJECTS\NetflixUnOfficial\NetflixUnOfficial\obj\Debug\netcoreapp3.1\NetflixUnOfficial.csproj.AssemblyReference.cache
 D:\2-PROJECTS\NetflixUnOfficial\NetflixUnOfficial\obj\Debug\netcoreapp3.1\NetflixUnOfficial_Content.g.cs
 D:\2-PROJECTS\NetflixUnOfficial\NetflixUnOfficial\obj\Debug\netcoreapp3.1\NetflixUnOfficial_MarkupCompile.cache
 D:\2-PROJECTS\NetflixUnOfficial\NetflixUnOfficial\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\WebView2Loader.dll
