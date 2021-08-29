@@ -2,6 +2,8 @@
  A complete Un-Official #Netflix app that supports **4K** video quality. Basically Netflix website inside an app :)  
  **Download now | https://github.com/RaoHammas/Netflix/releases/tag/Netflix**    
  
+ Made with ❤️
+ 
  
  https://user-images.githubusercontent.com/16499626/131233121-511fd3a9-3584-49b8-86d3-2096068deaf6.mp4
 
