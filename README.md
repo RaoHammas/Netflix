@@ -1,5 +1,5 @@
 # Netflix
- A complete Un-Official #Netflix app that supports **4K* video quality. Basically Netflix website inside an app :)  
+ A complete Un-Official #Netflix app that supports **4K** video quality. Basically Netflix website inside an app :)  
  **Download now | https://github.com/RaoHammas/Netflix/releases/tag/Netflix**    
  
  
