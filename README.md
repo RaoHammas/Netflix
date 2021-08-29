@@ -1,7 +1,12 @@
 # Netflix
  A complete Un-Official #Netflix app that supports **4K** video quality. Basically Netflix website inside an app :)  
- **Download now | https://github.com/RaoHammas/Netflix/releases/tag/Netflix**    
+ **Download now | https://github.com/RaoHammas/Netflix/releases/tag/Netflix** 
  
+ - Built with .Net Core 3.1
+ - Suports Windows 11, 10, 8.1, 8, 7 maybe XP too 🤷‍♂️
+ - No need to install just download & run the app.
+
+
  Made with ❤️
  
  
